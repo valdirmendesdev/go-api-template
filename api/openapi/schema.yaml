@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  title: GO API template project
+  description: A backend project structure
+  version: 1.0.0
+servers:
+  - url: http://localhost:8395/api/v1
+    description: Local server
+paths:
+  /:
+    get:
+      summary: Root endpoint
+      description: Returns a welcome message
+      operationId: welcome-message
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Welcome to GO API template project
+      tags:
+        - Welcome
